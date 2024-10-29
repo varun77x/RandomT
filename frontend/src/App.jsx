@@ -4,11 +4,13 @@ import RecipeForm from './components/RecipeForm'
 
 
 function App() {
+  handleGenerateRecipe()
+  isGenerating()
 
   return (
     <>
-      <Header/>
-      <RecipeForm></RecipeForm>
+      <Header />
+      <RecipeForm onGenerate={handleGenerateRecipe} isGenerating={isGenerating} />
     </>
   )
 }

@@ -1,7 +1,8 @@
-import { useState } from 'react'
-import Header from './components/Header'
-import RecipeForm from './components/RecipeForm'
-
+// App.jsx
+import React, { useState } from 'react';
+import Header from './components/Header';
+import RecipeForm from './components/RecipeForm';
+import RecipeDisplay from './components/RecipeDisplay';
 
 function App() {
   const [recipe, setRecipe] = useState('');
@@ -29,12 +30,12 @@ function App() {
   };
 
   return (
-    <>
+    <div className="container mx-auto p-6 max-w-lg">
       <Header />
       <RecipeForm onGenerate={handleGenerateRecipe} isGenerating={isGenerating} />
-      {recipe}
-    </>
-  )
+      {recipe && <RecipeDisplay recipe={recipe} />}
+    </div>
+  );
 }
 
-export default App
+export default App;

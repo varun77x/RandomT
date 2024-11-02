@@ -1,4 +1,4 @@
-![frontend](frontend/src/assets/fav-icon.png)
+![frontend](frontend/src/assets/github-photo.png)
 
 # RecipeGenAi
 
